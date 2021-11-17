@@ -33,19 +33,6 @@
                     android:clipToOutline="true"
                     android:layout_margin="1dp"
                     tools:src="@drawable/ic_round_wallpaper_24" />
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/favBtn"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_alignTop="@id/newsImage"
-                    android:foregroundGravity="right"
-                    android:src="@drawable/ic_baseline_favorite_border_24"
-                    android:backgroundTint="@android:color/transparent"
-                    android:scaleType="fitXY"
-                    ></ImageButton>
                 <TextView
                     android:id="@+id/newsAuthor"
                     style="@style/NewsArticle.Author"

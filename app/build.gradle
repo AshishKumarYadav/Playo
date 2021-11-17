@@ -1,8 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
-
+kapt {
+    generateStubs = true
+}
 android {
     compileSdk 31
 
@@ -28,6 +31,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding
     }
 }
 
