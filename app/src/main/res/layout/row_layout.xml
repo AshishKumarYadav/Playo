@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/NewsArticle.View"
+        android:id="@+id/newsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_list_item">
+
+            <!-- News block -->
+            <RelativeLayout
+                android:id="@+id/newsImageView"
+                android:layout_width="match_parent"
+                android:layout_height="180sp">
+
+
+                <ImageView
+                    android:id="@+id/newsImage"
+                    style="@style/NewsArticle.Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_size"
+                    android:contentDescription="@string/news_image"
+                    android:scaleType="fitCenter"
+                    android:clipToOutline="true"
+                    android:layout_margin="1dp"
+                    tools:src="@drawable/ic_round_wallpaper_24" />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/favBtn"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignTop="@id/newsImage"
+                    android:foregroundGravity="right"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    ></ImageButton>
+                <TextView
+                    android:id="@+id/newsAuthor"
+                    style="@style/NewsArticle.Author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    tools:text="ABC News" />
+
+            </RelativeLayout>
+
+            <!-- News Title -->
+            <TextView
+                android:id="@+id/newsTitle"
+                style="@style/NewsArticle.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newsImageView"
+                tools:text="Elon Musk says Tesla can't yet launch in India" />
+
+            <!-- Publish at -->
+            <TextView
+                android:id="@+id/newsPublishedAt"
+                style="@style/NewsArticle.PublishedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newsTitle"
+                android:layout_marginStart="@dimen/normal_padding"
+                android:layout_marginLeft="@dimen/normal_padding"
+                tools:text="@string/str_test_date" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
