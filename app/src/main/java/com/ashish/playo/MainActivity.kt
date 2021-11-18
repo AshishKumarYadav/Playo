@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         initView()
     }
 
-    fun initView() {
+    private fun initView() {
 
         recyclerView = findViewById(R.id.recycler_view)
 

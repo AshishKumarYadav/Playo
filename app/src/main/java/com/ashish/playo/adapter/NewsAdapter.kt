@@ -11,7 +11,7 @@ import com.ashish.playo.databinding.RowLayoutBinding
 import com.ashish.playo.model.NewsArticle
 import com.bumptech.glide.Glide
 
-class NewsAdapter(val context: Context): RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class NewsAdapter(private val context: Context): RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     private var arrayList: MutableList<NewsArticle>? =null
 
@@ -34,7 +34,9 @@ class NewsAdapter(val context: Context): RecyclerView.Adapter<NewsAdapter.NewsVi
         holder.binding.newsAuthor.text = item?.author
         holder.binding.newsTitle.text = item?.title
         holder.binding.newsPublishedAt.text = item?.publishedAt
+
         Glide.with(holder.itemView.context).load(item?.urlToImage).into(holder.binding.newsImage)
+        holder.binding.newsImage.adjustViewBounds=true
         holder.binding.newsCard.setOnClickListener(View.OnClickListener {
 
             val i = Intent(Intent.ACTION_VIEW)
